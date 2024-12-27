@@ -6,3 +6,25 @@
  * output: string
  * validate input: throw TypeError with message "expected number but received <type-of-argument>" if input is not a number
  */
+
+const getDistanceMessageFromSumTo100 = (value) => {
+  if (Array.isArray(value)) {
+    throw new TypeError("expected number but received array");
+  }
+
+  if (typeof value !== "number") {
+    throw new TypeError(`expected number but received ${typeof value}`);
+  }
+
+  const threshold = 100;
+  const randomNumber = Math.floor(Math.random() * (threshold + 1));
+  const sum = randomNumber + value;
+
+  if (sum > threshold) {
+    return `Sum with value ${sum} exceeds in ${sum - threshold} from number 100`;
+  }
+
+  return `Sum with value ${sum} is left in ${threshold - sum} from number 100`;
+};
+
+export default getDistanceMessageFromSumTo100;
