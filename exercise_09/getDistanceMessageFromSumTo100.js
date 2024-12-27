@@ -7,6 +7,12 @@
  * validate input: throw TypeError with message "expected number but received <type-of-argument>" if input is not a number
  */
 
+/**
+ * generates a random number between 0-100 and it sum to given number, if the sum exceeds 100 returns "Sum with value N exceeds in N from number 100", otherwise returns "Sum with value N is left in N from number 100"
+ * @param {number} inputNumber
+ * @returns {string}
+ * @throws {TypeError}
+ */
 const getDistanceMessageFromSumTo100 = (value) => {
   if (Array.isArray(value)) {
     throw new TypeError("expected number but received array");
