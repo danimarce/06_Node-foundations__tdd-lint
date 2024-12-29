@@ -7,7 +7,7 @@
  */
 
 /**
- *
+ * finds how much a number exceeds or is left to reach one value
  * @param {number} value
  * @param {number} threshold
  * @returns {number}
